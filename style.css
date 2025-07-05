@@ -1,0 +1,132 @@
+:root {
+  --cor-fundo: #1c1c1e;
+  --cor-texto: #ffffff;
+  --cor-box: rgba(44, 44, 46, 0.9);
+  --cor-botao: #ff4081;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.5s, color 0.5s;
+}
+
+body.estrelado {
+  background-image: url('imagens/estrelas.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+  animation: estrelasMove 100s linear infinite;
+}
+
+@keyframes estrelasMove {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  background-color: var(--cor-box);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: background 0.5s;
+}
+
+h1 {
+  text-align: center;
+  color: #ff80ab;
+  text-shadow: 0 0 5px #fff;
+}
+
+#btn-tema {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px;
+  background-color: var(--cor-botao);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#btn-tema:hover {
+  background-color: #e73370;
+}
+
+form, .controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, select, textarea {
+  flex: 1 1 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+button {
+  padding: 10px;
+  background-color: var(--cor-botao);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #e73370;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: rgba(80, 80, 80, 0.8);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+li.assistido {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+li .titulo {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+li .botoes {
+  margin-top: 5px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+li .botoes button {
+  font-size: 0.9rem;
+}
+
+#contador {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}

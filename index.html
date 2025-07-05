@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CineLove 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 CineLove</h1>
+    <button id="btn-tema">🌌 Mudar Tema</button>
+
+    <div class="controls">
+      <input type="text" id="busca" placeholder="🔍 Buscar filme..." />
+      <select id="filtro">
+        <option value="todos">Todos</option>
+        <option value="assistidos">Assistidos</option>
+        <option value="nao-assistidos">Não assistidos</option>
+        <option value="favoritos">Favoritos</option>
+      </select>
+      <button onclick="exportarLista()">📤 Exportar lista</button>
+    </div>
+
+    <form id="form-filme">
+      <input type="text" id="titulo" placeholder="Nome do filme" required />
+      <select id="genero" required>
+        <option value="">Selecione o gênero</option>
+        <option>Comédia</option>
+        <option>Romance</option>
+        <option>Ação</option>
+        <option>Drama</option>
+        <option>Terror</option>
+        <option>Ficção</option>
+      </select>
+      <input type="date" id="data" />
+      <textarea id="comentario" placeholder="Comentário pessoal..."></textarea>
+      <label for="nota">Nota:</label>
+      <select id="nota">
+        <option value="1">⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+      </select>
+      <button type="submit">Adicionar 🎥</button>
+    </form>
+
+    <p id="contador"></p>
+    <ul id="lista-filmes"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
